@@ -12,6 +12,7 @@ features lists:
 * soustraction
 * racine carré
 * valeur absolue
+* manage priorities with parentheses
 * 2nd f (la touche seconde fonction)
 * cosinus
 * sinus
