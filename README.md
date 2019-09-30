@@ -8,15 +8,17 @@ the work that you must do is to make a calculator with Javascript *(ES6 don't fo
 features lists:
 * addition
 * multiplication
-* division
-* soustraction
-* racine carré
+* quotient
+* substraction
+* square root
 * valeur absolue
 * manage priorities with parentheses
 * 2nd f (la touche seconde fonction)
 * cosinus
 * sinus
 * tangeante
+
+*NB: NB: when you click on second function the quotient key becomes modulo*
 
 i think that if you want to do javascript, you know html and css too so, i don't want a calcultor with a dirty face. do your effort to make something clean
 
