@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html > 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Calculatrice en javascript</title>
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="calco.css" />
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        
+        <form action="" name="form1">
+            <table class="calculatrice" id="calc">
+                 
+                <tr >
+                    <td colspan="6" class="calc_td_resultat">
+                        <h1>cal<span class="deco">cula</span>trice</h1>
+                        <div class="border">
+                            <input type="text" readonly='readonly' id="dd" class="calc_resultat"/>
+                            <input type="text" readonly="readonly" name="calc_resultat" id="calc_resultat" class="calc_resultat" onkeydown="key_detect_calc('calc',event);" />
+                        </div>
+                        
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td class="calc_td_btn_new">
+                            <input type="button"  class="calc blue" value="2ndF" onclick="secondf()" />
+                    </td>
+                    <td class="calc_td_btn_new">
+                            <input type="button" class="calc blue" value="x²" onclick="scientific(5)"/>
+                    </td>
+                    <td class="calc_td_btn_new">
+                            <input type="button" class="calc blue" value="x^y" onclick="tresor('calc','**')"/>
+                    </td>
+                    <td class="calc_td_btn_new">
+                            <input type="button" class="calc blue" value="&pi;" onclick="scientific(7)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="calc_td_btn_new">
+                            <input type="button" class="calc blue" value="sqrt" onclick="scientific(1)" />
+                    </td>
+                    <td class="calc_td_btn_new">
+                            <input type="button" class="calc blue" value="tan" onclick="scientific(2)"/>
+                    </td>
+                    <td class="calc_td_btn_new">
+                            <input type="button" class="calc blue" value="sin" onclick="scientific(3)"  />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc blue" value="cos" onclick="scientific(4)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="calc_td_btn">
+                        <input type="button" class="calc" value="ln" onclick="scientific(8)" />
+                    </td>
+                </tr>
+                <tr>     
+                        
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="CE" onclick="f_calc('calc','ce');" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="&larr;" onclick="f_calc('calc','nbs');" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_op" value="+" onclick="f_calc('calc','+');" />
+                    </td>
+                </tr>              
+                    
+                <tr>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="7" onclick="add_calc('calc',7);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="8" onclick="add_calc('calc',8);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="9" onclick="add_calc('calc',9);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_op" value="-" onclick="f_calc('calc','-');" />
+                    </td>
+                </tr>
+                <tr>
+
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="4" onclick="add_calc('calc',4);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="5" onclick="add_calc('calc',5);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="6" onclick="add_calc('calc',6);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_op" value="x" onclick="f_calc('calc','*');" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="1" onclick="add_calc('calc',1);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="2" onclick="add_calc('calc',2);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="3" onclick="add_calc('calc',3);" />
+                    </td>
+                    <td class="calc_td_btn">
+                        <input type="button" class="calc_op" id="modulo"  value="/" onclick="f_calc('calc',value =='/'?'/':'%');" />
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="0" onclick="add_calc('calc',0);" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="&plusmn;" onclick="f_calc('calc','+-');" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_btn" value="," onclick="add_calc('calc','.');" />
+                    </td>
+                    <td class="calc_td_btn">
+                            <input type="button" class="calc_opb" value="=" onclick="f_calc('calc','=');"/>
+                    </td>
+                </tr>
+               
+            </table>
+        </form>
+       
+        <script type="text/javascript">
+            document.getElementById('calc').onload=initialiser_calc('calc');
+        </script>
+    </body>
+</html>
+
+
+
+
+ln 
+le btn pi
+expo(choisir l'exposant)
+integral 
+le nbre au carre , le btn 
