@@ -1,4 +1,4 @@
-# nan-es6-calculator-subject
+# es6-calculator-subject
 Description: Projet de prise en main du Javascript ES6
 
 # Exercise subject
@@ -26,7 +26,6 @@ i think that if you want to do javascript, you know html and css too so, i don't
 
 1. fork the repository
 2. clone the repository
-3. open the nan-es6-calculator-subject folder on your computer in your code editor
+3. open the es6-calculator-subject folder on your computer in your code editor
 
 GOOD LUCK !
-### *Coder ? NaaaaaaaN c'est pas sorcier !*
